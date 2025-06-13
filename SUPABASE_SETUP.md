@@ -39,7 +39,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key_here
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
 
 # Optional: For OAuth redirects
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_SITE_URL=http://0.0.0.0:3000
 ```
 
 **⚠️ Important:** 
@@ -59,7 +59,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ### Enable Email Authentication
 1. Go to **Authentication** > **Settings**
 2. Ensure **Enable email confirmations** is checked
-3. Set **Site URL** to `http://localhost:3000` (development) or your production URL
+3. Set **Site URL** to `http://0.0.0.0:3000` (development) or your production URL
 
 ### Enable OAuth Providers (Optional)
 
@@ -93,7 +93,7 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:3000` and test the authentication!
+Visit `http://0.0.0.0:3000` and test the authentication!
 
 ## 🎯 Key Features Enabled
 

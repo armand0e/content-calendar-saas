@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://0.0.0.0:3000](http://0.0.0.0:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
@@ -46,10 +46,10 @@ Great news! Your local Supabase backend is fully set up and ready for developmen
 
 For your reference, here are the details for your local environment. These are the same details you placed in your `.env.local` file.
 
-*   **API URL:** `http://127.0.0.1:54321`
+*   **API URL:** `http://0.0.0.0:54321`
 *   **Anon Key:** `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0`
-*   **Database URL:** `postgresql://postgres:postgres@127.0.0.1:54322/postgres`
-*   **Supabase Studio:** You can visually manage your local database by visiting `http://127.0.0.1:54323` in your browser.
+*   **Database URL:** `postgresql://postgres:postgres@0.0.0.0:54322/postgres`
+*   **Supabase Studio:** You can visually manage your local database by visiting `http://0.0.0.0:54323` in your browser.
 
 ### Next Steps
 
@@ -59,6 +59,6 @@ For your reference, here are the details for your local environment. These are t
     npm run dev -- --port 3001
     ```
 2.  **Test Authentication:** Visit the `/login` page in your application. You should now be able to sign up and log in, and the data will be stored in your local Supabase database. Check the Dashboard page to see if your user data is displayed correctly.
-3.  **Explore Supabase Studio:** Open `http://127.0.0.1:54323` to see the new users and data appear in your database tables as you use the application.
+3.  **Explore Supabase Studio:** Open `http://0.0.0.0:54323` to see the new users and data appear in your database tables as you use the application.
 
 This completes the setup of your local backend. Your Content Calendar SaaS now has a fully functional, integrated backend for development. Let me know if you have any other questions!
