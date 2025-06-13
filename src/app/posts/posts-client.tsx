@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from 'next/link'
 import { duplicatePost } from './actions'
 import SearchFilter from './search-filter'
+import PublishButton from './publish-button'
 
 // Simple date formatting helper
 const formatTimeAgo = (date: string) => {
@@ -242,6 +243,9 @@ export default function PostsClient({ initialPosts }: PostsClientProps) {
                       Duplicate
                     </Button>
                   </form>
+                  {(post.status === 'draft' || post.status === 'scheduled') && (
+                    <PublishButton postId={post.id} platforms={post.platforms} status={post.status} />
+                  )}
                   {post.status === 'draft' && (
                     <Link href={`/posts/${post.id}/edit`}>
                       <Button size="sm">
