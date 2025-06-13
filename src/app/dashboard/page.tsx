@@ -44,7 +44,9 @@ export default async function DashboardPage() {
           </div>
           <div className="flex items-center space-x-4">
             <span className="text-sm text-gray-600">Welcome, {user.email}</span>
-            <Button size="sm">Create Post</Button>
+            <Link href="/posts/new">
+              <Button size="sm">Create Post</Button>
+            </Link>
             <form action={logout}>
               <Button variant="outline" size="sm" type="submit">
                 Sign Out
@@ -67,24 +69,24 @@ export default async function DashboardPage() {
               </svg>
               <span>Dashboard</span>
             </a>
-            <a href="#" className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
+            <Link href="/calendar" className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
               </svg>
               <span>Calendar</span>
-            </a>
-            <a href="#" className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
+            </Link>
+            <Link href="/posts" className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
               </svg>
               <span>Content</span>
-            </a>
-            <a href="#" className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
+            </Link>
+            <Link href="/analytics" className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
               </svg>
               <span>Analytics</span>
-            </a>
+            </Link>
           </nav>
         </aside>
 
@@ -168,7 +170,9 @@ export default async function DashboardPage() {
                         <p className="text-sm font-medium">Create your first post</p>
                         <p className="text-xs text-gray-500">Start building your content library</p>
                       </div>
-                      <Button size="sm">Create</Button>
+                      <Link href="/posts/new">
+                        <Button size="sm">Create</Button>
+                      </Link>
                     </div>
                     
                     <div className="flex items-center space-x-4 p-3 bg-gray-50 rounded-lg">
@@ -212,24 +216,30 @@ export default async function DashboardPage() {
                   <CardTitle>Quick Actions</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <Button className="w-full justify-start" variant="outline">
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-                    </svg>
-                    Create New Post
-                  </Button>
-                  <Button className="w-full justify-start" variant="outline">
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
-                    </svg>
-                    Schedule Content
-                  </Button>
-                  <Button className="w-full justify-start" variant="outline">
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
-                    </svg>
-                    View Analytics
-                  </Button>
+                  <Link href="/posts/new" className="w-full">
+                    <Button className="w-full justify-start" variant="outline">
+                      <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                      </svg>
+                      Create New Post
+                    </Button>
+                  </Link>
+                  <Link href="/calendar" className="w-full">
+                    <Button className="w-full justify-start" variant="outline">
+                      <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                      </svg>
+                      Schedule Content
+                    </Button>
+                  </Link>
+                  <Link href="/analytics" className="w-full">
+                    <Button className="w-full justify-start" variant="outline">
+                      <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                      </svg>
+                      View Analytics
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
